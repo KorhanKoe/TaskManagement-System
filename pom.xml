@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.taskmanagementsystem</groupId>
+    <artifactId>TaskManagement_System</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>   <!--Quellcode ist mit der Java 17 Version kompatibel-->
+        <maven.compiler.target>17</maven.compiler.target>   <!--Zielformat für den Compiler-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  <!--Definiert die Zeichencodierung-->
+        <java.version>17</java.version>     <!--Definiert die Java-Verion-->
+    </properties>
+
+    <parent>        <!--Definiert das Elter-Pom für das Projekt, stellt Konfigurationen, Abhängigkeiten etc. bereit-->
+        <groupId>org.springframework.boot</groupId>     <!--Wird von Sprin Boot bereitgestellt-->
+        <artifactId>spring-boot-starter-parent</artifactId>     <!--Name des Pakets, das durch die Eltern-Pom bereitgestellt wird-->
+        <version>3.3.0</version>        <!--Die aktuelle Version-->
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.thymeleaf</groupId>        <!--Aufgrund von Benutzerinteraktionen wurde Thymeleaf implementiert-->
+            <artifactId>thymeleaf</artifactId>
+            <version>3.1.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>     <!--Erforderliche Bibliotheken für eine Spinrg Boot Webanwendung-->
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>       <!--Hinzufügen der relationalen Datenbank H2-->
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>      <!--Definiert den Gültigkeitsbereich der Abhängigkeit, in diesem Fall während der Laufzeit-->
+        </dependency>
+
+        <dependency>        <!--Verbessert die Entwicklungszeit der Anwendung -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>       <!--Notwendige Bibliotheken für das schreiben von Test (JUnit als Kernkomponente)-->
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>      <!--Java Test-Framework zum erstellen von Mock-Objekten für Unit-Test-->
+            <artifactId>mockito-core</artifactId>
+            <version>3.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.platform</groupId>     <!--Für Jakarte EE Bibliotheken-->
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>     <!--Konfigurationen und Plugins für den Build-Prozess-->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>       <!--Ermöglicht das verpacken von Anwendungen in ausführbare JAR-Dateien-->
+            </plugin>
+        </plugins>
+    </build>
+</project>
