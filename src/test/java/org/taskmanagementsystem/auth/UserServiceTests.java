@@ -56,5 +56,4 @@ public class UserServiceTests {
         assertEquals(user, result);
     }
 
-    // Weitere Testfälle für andere Methoden der UserService können hier hinzugefügt werden
 }
