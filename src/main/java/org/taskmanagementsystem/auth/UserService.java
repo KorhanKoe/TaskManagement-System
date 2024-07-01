@@ -16,13 +16,11 @@ public class UserService {
 
     //Erstellt einen Benutzer
     public User createUser(User user) {
-        // Hier könnten zusätzliche Validierungen oder Logik für die Benutzererstellung stattfinden
         return userRepository.save(user);
     }
 
     //Aktualisiert einen Benutzer
     public User updateUser(User user) {
-        // Hier könnten zusätzliche Validierungen oder Logik für die Benutzeraktualisierung stattfinden
         return userRepository.save(user);
     }
 

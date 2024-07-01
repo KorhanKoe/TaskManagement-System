@@ -16,7 +16,7 @@
         <java.version>17</java.version>     <!--Definiert die Java-Verion-->
     </properties>
 
-    <parent>        <!--Definiert das Elter-Pom für das Projekt, stellt Konfigurationen, Abhängigkeiten etc. bereit-->
+    <parent>        <!--Definiert das Eltern-Pom für das Projekt, stellt Konfigurationen, Abhängigkeiten etc. bereit-->
         <groupId>org.springframework.boot</groupId>     <!--Wird von Sprin Boot bereitgestellt-->
         <artifactId>spring-boot-starter-parent</artifactId>     <!--Name des Pakets, das durch die Eltern-Pom bereitgestellt wird-->
         <version>3.3.0</version>        <!--Die aktuelle Version-->
